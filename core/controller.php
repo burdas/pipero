@@ -11,6 +11,7 @@ class Controller
 
 	public function main()
 	{
+		$this->model->getUsers();
 		$this->model->string = "main.html";
 		$this->model->title = "Página principal";
 	}

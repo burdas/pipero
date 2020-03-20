@@ -6,12 +6,15 @@ class Model
     public $logged;
     public $styles;
 
+    private $BD
+
     public function __construct()
     {
         $this->string = "main.html";
         $this->scripts = array();
         $this->styles = array();
         $this->title = "";
+        $this->$BD = NULL
     }
 
     public function addCss($fileName)
@@ -30,9 +33,16 @@ class Model
         array_push($this->scripts, $fileName);
     }
 
-}
+    function getConnection()
+    {
+        $this->$BD = new SQLite3('/../BD.db');
+    }
 
-function getConnection()
-{
-
+    public function getUsers(){
+        if (!is_null($this->$BD)) {
+            $sentencia = $bd->prepare('SELECT * FROM Usuarios');
+            $resultado = $this->$sentencia->execute();
+            echo var_dump($resultado->fetchArray());
+        }
+    }
 }
