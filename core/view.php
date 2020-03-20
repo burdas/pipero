@@ -13,23 +13,15 @@ class View
     public function output()
     {
         switch ($this->model->string) {
-            case 'panel.html':
-                return $this->addNavbar() . $this->montarPanel($this->model->string) . $this->addFooter();
-                break;
-
-            case 'enlaces.html':
-                return $this->addNavbar() . $this->montarEnlaces($this->model->string) . $this->addFooter();
-                break;
-
             default:
-                return $this->addNavbar() . file_get_contents("./templates/" . $this->model->string) . $this->addFooter();
+                return file_get_contents("./templates/" . $this->model->string)
                 break;
         }
     }
 
     public function getTitle()
     {
-        return '<title>' . 'Taxi Peralta - ' . $this->model->title . ' </title>' . PHP_EOL;
+        return '<title>' . 'Pipero - ' . $this->model->title . ' </title>' . PHP_EOL;
     }
 
     public function getScripts()

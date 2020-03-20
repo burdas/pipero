@@ -12,9 +12,7 @@ class Controller
 	public function main()
 	{
 		$this->model->string = "main.html";
-		$this->model->addCss('main.css');
 		$this->model->title = "Página principal";
-		$this->model->addVisita('principal');
 	}
 
 }
