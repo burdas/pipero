@@ -6,7 +6,7 @@ class Model
     public $logged;
     public $styles;
 
-    private $BD
+    private $BD;
 
     public function __construct()
     {
