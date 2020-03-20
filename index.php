@@ -3,15 +3,10 @@ include './core/controller.php';
 include './core/model.php';
 include './core/view.php';
 
-if (empty($_SERVER['HTTPS'])) {
-    header('Location: https://taxiperalta.com');
-    exit;
-}
-
 $model = new Model();
 $controller = new Controller($model);
 $view = new View($controller, $model);
-session_start();
+//session_start();
 if (isset($_GET['action']) && !empty($_GET['action'] && method_exists($controller, $_GET['action']))) {
     $controller->{$_GET['action']}();
 } else {
@@ -28,7 +23,7 @@ if (isset($_GET['action']) && !empty($_GET['action'] && method_exists($controlle
     echo $view->getTitle();
     ?>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Taxi de Peralta, Navarra (España)">
+    <meta name="description" content="">
     <meta name="author" content="Marcos Burdaspar Celada">
     <!-- Importamos bootstrap -->
     <link rel="stylesheet" href="./css/bootstrap/bootstrap.min.css">
