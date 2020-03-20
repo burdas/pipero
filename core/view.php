@@ -12,7 +12,7 @@ class View
 
     public function output()
     {
-        return file_get_contents("./templates/" . $this->model->string)
+        return file_get_contents("./templates/" . $this->model->string);
     }
 
     public function getTitle()
