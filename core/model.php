@@ -12,8 +12,6 @@ class Model
         $this->scripts = array();
         $this->styles = array();
         $this->title = "";
-        $this->addCss('general.css');
-        $this->addJs('general.js');
     }
 
     public function addCss($fileName)
