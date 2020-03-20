@@ -12,11 +12,7 @@ class View
 
     public function output()
     {
-        switch ($this->model->string) {
-            default:
-                return file_get_contents("./templates/" . $this->model->string)
-                break;
-        }
+        return file_get_contents("./templates/" . $this->model->string)
     }
 
     public function getTitle()

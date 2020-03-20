@@ -27,7 +27,7 @@ if (isset($_GET['action']) && !empty($_GET['action'] && method_exists($controlle
     <meta name="author" content="Marcos Burdaspar Celada">
     <!-- Importamos bootstrap -->
     <link rel="stylesheet" href="./css/bootstrap/bootstrap.min.css">
-    <link rel="icon" href="./img/favicon.ico">
+    <!-- <link rel="icon" href="./img/favicon.ico"> -->
     <link href="https://fonts.googleapis.com/css?family=Lobster&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="https://kit.fontawesome.com/6529331419.js"></script>
